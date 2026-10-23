@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Recommender</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <header>
+    <h1>🎬 Movie Recommender</h1>
+    <p>Pick a movie you like, and get 5 similar ones.</p>
+  </header>
+
+  <main>
+    <!-- Search box -->
+    <div class="search-box">
+      <input
+        type="text"
+        id="movie-input"
+        list="movie-options"
+        placeholder="Type a movie name... e.g. Avatar"
+        autocomplete="off"
+      />
+      <!-- The datalist below powers the autocomplete suggestions -->
+      <datalist id="movie-options"></datalist>
+
+      <button id="recommend-btn">Recommend</button>
+    </div>
+
+    <!-- Small status / error message -->
+    <p id="status-message"></p>
+
+    <!-- Recommended movies show up here as cards -->
+    <section id="results" class="results-grid"></section>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; background: #141221; color: #f2f0f7; }
+header { text-align: center; padding: 48px 20px 24px; }
+header h1 { margin: 0 0 8px; font-size: 2.2rem; }
+header p { margin: 0; color: #b6b2c9; }
+main { max-width: 900px; margin: 0 auto; padding: 0 20px 60px; }
+.search-box { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 8px; }
+#movie-input { flex: 1; min-width: 240px; max-width: 420px; padding: 12px 16px; border-radius: 8px; border: 1px solid #423d5c; background: #201d33; color: #f2f0f7; font-size: 1rem; }
+#movie-input:focus { outline: 2px solid #e94560; }
+#recommend-btn { padding: 12px 24px; border-radius: 8px; border: 0; background: #e94560; color: white; font-size: 1rem; font-weight: 600; cursor: pointer; }
+#recommend-btn:hover { background: #d13850; }
+#recommend-btn:disabled { background: #6c6480; cursor: not-allowed; }
+#status-message { text-align: center; min-height: 24px; color: #ff8fa3; }
+.results-grid { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; }
+.movie-card { background: #201d33; border-radius: 10px; overflow: hidden; text-align: center; transition: transform 0.15s ease; }
+.movie-card:hover { transform: translateY(-4px); }
+.movie-card img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; background: #423d5c; }
+.movie-card .movie-title { padding: 10px 8px; font-size: 0.9rem; font-weight: 600; }

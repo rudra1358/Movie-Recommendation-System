@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "build:data": "python model/export_cloudflare.py",
+    "dev": "wrangler pages dev public",
+    "deploy": "npm run build:data && wrangler pages deploy public"
+  },
+  "devDependencies": {
+    "wrangler": "latest"
+  }
+}
